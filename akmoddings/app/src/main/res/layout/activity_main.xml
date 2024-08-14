@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -15,38 +16,39 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email" />
+            android:hint="이메일을 입력하세요." />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login" />
+            android:text="로그인" />
 
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logout" />
+            android:text="로그아웃" />
 
         <Button
             android:id="@+id/resetPasswordButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Forgot Password" />
+            android:text="비밀번호 재설정" />
 
         <Button
             android:id="@+id/changeEmailButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Change Email" />
+            android:text="이메일 변경" />
     </LinearLayout>
 
     <!-- 제품 추가 폼 -->
@@ -61,25 +63,25 @@
             android:id="@+id/productName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Product Name" />
+            android:hint="상품 이름" />
 
         <EditText
             android:id="@+id/productLoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Product Location" />
+            android:hint="상품 위치" />
 
         <EditText
             android:id="@+id/available"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Available Quantity" />
+            android:hint="남은 수량" />
 
         <Button
             android:id="@+id/addProductButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Product" />
+            android:text="상품 추가" />
         <TextView
             android:id="@+id/authStatus"
             android:layout_width="wrap_content"
@@ -92,25 +94,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:ignore="ExtraText">
 
         <EditText
             android:id="@+id/resetEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your email" />
+            android:hint="비밀번호 변경 이메일을 전송할 이메일을 입력하세요." />
 
         <Button
             android:id="@+id/resetPasswordSubmitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send Reset Email" />
+            android:text="비밀번호 재설정 이메일 전송" />
 
         <Button
             android:id="@+id/resetPasswordBackButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back to Login" />
+            android:text="로그인 화면으로 돌아가기" />
     </LinearLayout>
 
     <!-- 이메일 변경 폼 -->
@@ -125,32 +128,32 @@
             android:id="@+id/currentEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Current Email" />
+            android:hint="현재 이메일" />
 
         <EditText
             android:id="@+id/newEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="New Email" />
+            android:hint="새롭게 변경할 이메일" />
 
         <EditText
             android:id="@+id/changeEmailPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="변경할 이메일 비밀번호"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/changeEmailSubmitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Change Email" />
+            android:text="이메일 변경" />
 
         <Button
             android:id="@+id/changeEmailBackButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back to Login" />
+            android:text="로그인 화면으로 돌아가기" />
     </LinearLayout>
 
 </LinearLayout>
