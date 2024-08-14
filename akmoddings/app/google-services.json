@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "719912819646",
+    "firebase_url": "https://akmoddings-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "akmoddings",
+    "storage_bucket": "akmoddings.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:719912819646:android:1318a42f14079c0a4277ef",
+        "android_client_info": {
+          "package_name": "com.example.akmoddings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "719912819646-904dq7r92o0f0jl8aap6ta7ctppq644p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB77LrfUMJM9D0OXbDiA39HMxq46tmM1l8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "719912819646-904dq7r92o0f0jl8aap6ta7ctppq644p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
