@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <!-- 로그인 폼 -->
     <LinearLayout
@@ -15,148 +15,142 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="이메일을 입력하세요"
-            android:inputType="textEmailAddress" />
+            android:hint="Email" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호를 입력하세요"
+            android:hint="Password"
             android:inputType="textPassword" />
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="로그인" />
+            android:text="Login" />
 
-        <TextView
-            android:id="@+id/authStatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
 
         <Button
             android:id="@+id/resetPasswordButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="비밀번호 재설정" />
+            android:text="Forgot Password" />
 
         <Button
             android:id="@+id/changeEmailButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이메일 주소 변경" />
+            android:text="Change Email" />
     </LinearLayout>
 
-    <!-- 로그아웃 버튼 -->
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="로그아웃"
-        android:layout_below="@id/loginForm" />
-
-    <!-- 상품 추가 섹션 -->
+    <!-- 제품 추가 폼 -->
     <LinearLayout
         android:id="@+id/productSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_below="@id/logoutButton">
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/productName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="상품의 이름을 입력하세요" />
+            android:hint="Product Name" />
 
         <EditText
             android:id="@+id/productLoc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="상품 위치를 입력하세요" />
+            android:hint="Product Location" />
 
         <EditText
             android:id="@+id/available"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="남은 갯수를 입력하세요" />
+            android:hint="Available Quantity" />
 
         <Button
             android:id="@+id/addProductButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="추가" />
-
-        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="1">
-
-            <TableRow>
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="물품 사진" />
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="물품 이름" />
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="물품 위치" />
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="물품 갯수" />
-            </TableRow>
-
-            <!-- 상품 리스트는 동적으로 추가됨 -->
-        </TableLayout>
+            android:text="Add Product" />
+        <TextView
+            android:id="@+id/authStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <!-- 비밀번호 재설정 섹션 -->
+    <!-- 비밀번호 재설정 폼 -->
     <LinearLayout
         android:id="@+id/passwordResetSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_below="@id/productSection">
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/resetEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="비밀번호를 재설정할 이메일을 입력하세요"
-            android:inputType="textEmailAddress" />
+            android:hint="Enter your email" />
 
         <Button
-            android:id="@+id/resetPasswordButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/resetPasswordSubmitButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="비밀번호 재설정" />
+            android:text="Send Reset Email" />
+
+        <Button
+            android:id="@+id/resetPasswordBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Login" />
     </LinearLayout>
 
-    <!-- 이메일 변경 섹션 -->
+    <!-- 이메일 변경 폼 -->
     <LinearLayout
         android:id="@+id/emailChangeSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:layout_below="@id/passwordResetSection">
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/currentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Current Email" />
 
         <EditText
             android:id="@+id/newEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="새 이메일 주소를 입력하세요"
-            android:inputType="textEmailAddress" />
+            android:hint="New Email" />
+
+        <EditText
+            android:id="@+id/changeEmailPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/changeEmailButton"
-            android:layout_width="wrap_content"
+            android:id="@+id/changeEmailSubmitButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="이메일 변경" />
+            android:text="Change Email" />
+
+        <Button
+            android:id="@+id/changeEmailBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Login" />
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>
